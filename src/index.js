@@ -1,5 +1,9 @@
-// main.js
-import * as THREE from 'https://cdn.skypack.dev/three@0.153.0';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+const controls = new OrbitControls( camera, renderer.domElement );
+const loader = new GLTFLoader();
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
